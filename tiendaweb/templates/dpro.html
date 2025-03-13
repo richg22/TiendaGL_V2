@@ -1,0 +1,92 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+{%load static%}
+
+<div class="album mt-4"> 
+    <div class="row align-items-center justify-content-between">
+
+      {% comment %} div contiene la imagen, el nombre y el precio {% endcomment %}
+      <div class="col-6 mt-6" style="text-align: center;">
+        <div class="card" style="width: 30rem; text-align: center;" >
+            <img src="{{ productos.imagen.url }}" class="card-img-top" alt="..." style="object-fit:scale-down;">
+            <div class="card-body">
+              <h2 class="card-text">{{ productos.nombre }}</h2>
+              <h3 style="text-align: center;"> ${{ productos.precio }}</h3>
+            </div>
+        </div>
+      </div>
+     {% comment %} end div foto precio nombre {% endcomment %}
+
+    {% comment %} div para la descripcion y demas weas {% endcomment %}
+    <div class="col-6 mt-6">
+    
+          <h1>Descripción</h1>
+              <p> {{ productos.descripcion }} </p>
+          <ul class="ui-vpp-highlighted-specs__features-list">
+            <li
+              class="ui-vpp-highlighted-specs__features-list-item ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--REGULAR">
+              Clasificación: {{ productos.clasificacion }}</li>
+            <li
+              class="ui-vpp-highlighted-specs__features-list-item ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--REGULAR">
+              Año de lanzamiento: {{ productos.anno_lanzamiento }}</li>
+            <li
+              class="ui-vpp-highlighted-specs__features-list-item ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--REGULAR">
+              Desarrollado por: {{ productos.desarrollador }}</li>
+            <li
+              class="ui-vpp-highlighted-specs__features-list-item ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--REGULAR">
+              Género: {{ productos.genero }}</li>
+            </ul>  
+    </div>
+    {% comment %} end div de weas {% endcomment %}
+
+    <hr>
+
+    {% comment %} api yt {% endcomment %}
+    <div class="container col-12 mt-5" style="text-align: center;">  
+      <h1 class="mb-5"> Tráiler </h1>
+    <div id="player"></div>
+   
+
+
+  </div>
+</div> 
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script src="{%static 'js/ytapi.js' %}"></script>
+
+<script>
+  var videoId = '{{ productos.id_video }}';
+
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  window.onYouTubeIframeAPIReady = function() {
+    createPlayer(videoId);
+  };
+
+  function createPlayer(videoId) {
+    console.log('ID del video api:', videoId);
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: videoId,
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+</script>
+
+ {% comment %} end api yt {% endcomment %}
+
+{%endblock%}

@@ -1,0 +1,59 @@
+{%extends 'admin.html'%}
+
+{%block content%}
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+ 
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Agregar un cliente</h1>
+      </div>
+
+      <form class="needs-validation" method="POST" action="{% url 'add_cliente' %}" >
+
+        {% csrf_token %}
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="firstName" class="form-label">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Se requiere un nombre y apellido valido.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="firstName" class="form-label">Rut</label>
+            <input type="text" class="form-control" id="rut" name="rut" placeholder="12345678 (sin puntos ni guión)" value="" required>
+            <div class="invalid-feedback">
+              Se requiere un Rut
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="tu@ejemplo.com">
+            <div class="invalid-feedback">
+              Porfavor ingresar un correo valido.
+            </div>
+          </div>
+
+          <div class="col-12 mb-3">
+            <label for="address" class="form-label">Direccion</label>
+            <input type="text" class="form-control" id="address" name="address"placeholder="1234 san gregorio" required>
+            <div class="invalid-feedback">
+              Porfavor ingresa tu direccion
+            </div>
+          </div>
+          
+          <input type="hidden" id="totalv" name="totalv">
+          <input type="hidden" id="cantidad_productos" name="cantidad_productos">
+          <input type="hidden" id="productos_list" name="productos_list" value="">
+
+        <div class="d-flex flex-wrap justify-content-center align-items-center" >
+            <button class="btn btn-success mt-3 mb-3" id="btn-agregar" name="add_cliente">Agregar</button>
+        </div>
+
+      </form>
+
+</main>
+
+{%endblock%}

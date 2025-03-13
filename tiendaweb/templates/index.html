@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+    {%load static%}
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#778" />
+          </svg>
+          <img style="object-fit:fill"
+            src="https://s3.amazonaws.com/businessinsider.mx/wp-content/uploads/2021/12/08164547/Comparacio%CC%81n-de-consolas.jpg"
+            class="d-block w-100" alt="...">
+          <div class="container">
+
+            <div class="carousel-caption">
+              <h1>Consolas</h1>
+              <p>Revisa nuestras consolas disponibles</p>
+              <p><a class="btn btn-lg btn-primary" href="prod.html">Ver</a></p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#778" />
+          </svg>
+          <img src="https://todasgamers.com/wp-content/uploads/2020/07/BANNERthe-last-of-us-ii-tercer-videojuego-mas-vendido-ano-17-07-2020.jpeg" alt="" >
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The Last of Us 2</h1>
+              <p>El nuevo juego de la franquicia ya disponible</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Ver</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#778" />
+          </svg>
+          <img style="object-fit: cover;"
+            src="https://www.amd.com/system/files/11368-gta-banner-1920x623.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>GTA V</h1>
+              <p>El ultimo y mejor GTA</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Ver</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</spa href="https://static.wikia.nocookie.net/leagueoflegends/images/4/48/Okay_Emote.png/revision/latest?cb=20180601212654"n>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <h2 class="mb-5" style="text-align: center;"> Últimas consolas </h2>
+        <div class="col-lg-4">
+
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#778" />
+            <image xlink:href="{%static 'images/foto1.jpg'%}" width="140" height="140" style="object-fit:fill;">
+          </svg>
+
+          <h2>Playstation 5</h2>
+          <p>Nueva consola de Sony </p>
+          <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+
+
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#778" />
+            <image xlink:href="{%static 'images/foto2.jpg'%}" width="140" height="140" style="object-fit:fill;"> </image>
+          </svg>
+
+          <h2>Xbox series X</h2>
+          <p>Nueva consola de Microsoft</p>
+          <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+            <image xlink:href="{%static 'images/foto3.jpg'%}" width="140" height="140" style="object-fit:fill;"></image>
+          </svg>
+
+          <h2>Nintendo Switch</h2>
+          <p>Nueva consola de Nintendo</p>
+          <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <div class="row mt-5" style="display: flex; justify-content: center;">
+          <h2 style="text-align: center; margin-bottom:50px;"> Precio del dólar</h2>
+          <div class="col-4" style="justify-content: left;">
+          <img src="https://static.wikia.nocookie.net/leagueoflegends/images/4/48/Okay_Emote.png/revision/latest?cb=20180601212654"> 
+
+          </div>
+          <div class="col-2" style="justify-content: left;">  <h4> Rammus dice: </h4> </div>
+          <div class="col-4 align-items-start">
+              <h1 id="dolar"></h1>
+              <p id="fecha_ac"></p>
+              <button class="btn btn-primary mt-5" id="btn-dolar">Actualizar</button>
+              
+          </div>
+
+       
+
+      </div>
+
+
+      <!-- /END THE FEAT..URETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+{% endblock %}
