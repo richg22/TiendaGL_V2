@@ -1,5 +1,5 @@
-# **Proyecto semestral para Desarrollo WEB e Integracion de plataformas**  
+# **Proyecto semestral para Desarrollo WEB e Integración de plataformas**  
 
 ## Framework: Django.  
 ## BD: MySQL.  
-## APIS: Precio de dolar, Youtube y Transbank.
+## APIS: Precio de dólar, Youtube y Transbank.
