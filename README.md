@@ -1,4 +1,4 @@
-Proyecto semestral para Desarrollo WEB e Integracion de plataformas
+**Proyecto semestral para Desarrollo WEB e Integracion de plataformas**
 
 Framework: Django
 BD: MySQL
